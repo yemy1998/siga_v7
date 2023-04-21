@@ -1,0 +1,26 @@
+
+git init
+git status
+*/*PARA SUBUIR TODO*/
+git add .
+git commit -m "iniciamos el proyecto"
+
+/*USUARIO*/
+git config --global user.email kikegrafico@gmail.com
+git config --global user.name mefistoperu
+git commit -m "iniciamos el proyecto"
+git branch -M main
+git remote add origin https://github.com/mefistoperu/qhatuna-fact.git
+git push -u origin main
+
+/*ACTUALIZAR*/
+git status
+git add .
+git commit -m "Actualizacion guradar coneccion"
+git push -u origin main
+
+@Webmaster2022
+
+
+git config --global http.sslVerify "false"
+$git config http.postBuffer 5000000000

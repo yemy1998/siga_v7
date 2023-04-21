@@ -1,0 +1,1 @@
+ERROR - 2023-01-18 11:30:57 --> -1: Archivo no encontrado. G:\xampp\htdocs\proyectos\sigav7\application\libraries\Facturador\files\certificates\20607124991.pfx

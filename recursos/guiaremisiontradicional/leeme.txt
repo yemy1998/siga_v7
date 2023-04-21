@@ -1,0 +1,28 @@
+Saludos. Se explicará en breve el uso de las librerías para crear plantillas Word y exportarlas con datos.
+
+Librerías utilizadas:
+
+- PhpWord v0.16
+- PhpDocx v2.5.2
+
+¿Cómo funciona?
+
+En cualquier documento .docx .doc o .rtf. Se les puede agregar variables en su distinción ${nombre_de_tu_variable} dentro del documento. De esta manera, se utilizará como plantilla
+para las impresiones de documentos .docx o pdf utilizando datos generados a partir del sistema. 
+
+El procedimiento dentro del codigo por pasos:
+
+1- Se adjunta la plantilla en la configuración. Esta se guarda siempre con el mismo nombre GuiaRemision.docx dentro de esta misma carpeta, reemplazando siempre la ultima. Igualmente se debe elegir si se quiere utilizar para exportar word o pdf.
+
+2- Al exportar una guia de remisión se hace una lectura de la plantilla registrada y con el metodo "setValue" de PhpWord, se asigna los valores a las variables registradas en la plantilla y se guarda como un archivo temporal.
+
+3- Se determina si está configurada para exportar en Word o en Pdf.
+
+ - Caso Word: Se toma el archivo temporal generado (ya listo para exportar) y con las cabeceras simplemente se emite para descargar.
+
+ - Caso Pdf: Es un poco más complicado pero las librerías de PDF generalmente trabajan con HTML. Por lo cual utilizando la librería "PhpDocx" se hace lectura del archivo temporal guardado para transformarlo en HTML. Se utiliza PhpDocx por cuestión de que es más estable para transformar archivos Word a HTML sin perder todo el formato. Luego simplemente se utiliza mPDF para emitir el PDF utilizando el HTML generado.
+
+ Documetación util:
+
+ https://phpword.readthedocs.io/en/stable/templates-processing.html
+ https://github.com/PHPOffice/PHPWord/tree/develop/samples
